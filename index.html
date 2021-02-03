@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strive School - Ignite Week 3 Day 5</title>
+    <link href="index.css" rel="stylesheet" >
+</head>
+<body>
+    <div id="app-container">
+        <div id="main">
+            <div id="menu"> <!--songs are inside here//to be in the left-->
+                I am the menu
+            </div>
+            <div id="songs"><!--to be on the right-->
+                     Here are the songs
+            </div>
+        </div>
+        <div id="player"><!--only put in the player after the menus and songs part//to be in the bottom of the page-->
+            You can play some songs here 
+        </div>
+    </div>
+
+    <script src = "index.js"></script>
+    <!--specific life cycle event to load the page when everything is ready-->
+    <!--we will execute our async function here-->    
+    <script>    
+        window.onload = async () => {
+            let eminemSongs = await loadSongs("eminem")
+            //now we can print out each songs
+            let songsDiv = document.getElementById("songs")
+            console.log(eminemSongs)
+            //eminemSongs.forEach(song => songsDiv.innerHTML += `<p>${song.title}</p>`)
+        }
+    </script>
+</body>
+</html>
+
+

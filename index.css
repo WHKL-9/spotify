@@ -1,0 +1,44 @@
+body{
+    margin: 0px 
+}
+
+/*# code because we are referring it to an id*/
+/*vh: vertical height*/
+/*wifth 100% -> taking up the whole screen*/
+#app-container{
+    min-height: 100vh;
+    width: 100%;
+} 
+
+/*we want to align #main and #song section next to each other*/
+#main{
+    display: flex;
+    min-height: 100vh;
+}
+
+#menu{
+    min-width: 230px;
+    width: 230px;
+    background-color: #030303;
+    color: white;
+}
+
+#songs{
+    background-color: #121212;
+    /*to take up all the available space*/
+    flex-grow: 1;
+    padding-bottom: 30px;
+    overflow: hidden;
+    color: white;
+}
+
+#player{ /*we want to fix the position of the bottom bar as we scroll*/
+    background: #282828;
+    color: white;
+    position: fix;
+    bottom: 0; /*make sure the play section is on the bottom of the page*/
+    z-index: 100;
+    line-height: 90px; /*so that the text will be vertically centered*/
+    text-align: center;
+    width: 100%
+}
